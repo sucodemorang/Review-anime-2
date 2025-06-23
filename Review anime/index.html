@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Review</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Anime Review</h1>
+    <nav>
+      <ul>
+        <li><button onclick="mostrarSecao('todos')">Todos</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="todos" class="anime-grid">
+      <div class="anime-card">
+        <img src="imagens/naruto.jpg.jpg" alt="Naruto">
+        <h3>Naruto</h3>
+        <div class="stars" data-id="naruto">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <button onclick="comentar('naruto', 'Naruto')">Comentar</button>
+      </div>
+
+      <div class="anime-card">
+        <img src="imagens/mha.jpg" alt="My Hero Academia">
+        <h3>My Hero Academia</h3>
+        <div class="stars" data-id="mha">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <button onclick="comentar('mha', 'My Hero Academia')">Comentar</button>
+      </div>
+
+      <div class="anime-card">
+        <img src="imagens/demon.jpg" alt="Demon Slayer">
+        <h3>Demon Slayer</h3>
+        <div class="stars" data-id="demon">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <button onclick="comentar('demon', 'Demon Slayer')">Comentar</button>
+      </div>
+
+      <div class="anime-card">
+        <img src="imagens/onepiece.jpg" alt="One Piece">
+        <h3>One Piece</h3>
+        <div class="stars" data-id="onepiece">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <button onclick="comentar('onepiece', 'One Piece')">Comentar</button>
+      </div>
+
+      <div class="anime-card">
+        <img src="imagens/aot.jpg" alt="Attack on Titan">
+        <h3>Attack on Titan</h3>
+        <div class="stars" data-id="aot">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <button onclick="comentar('aot', 'Attack on Titan')">Comentar</button>
+      </div>
+
+      <div class="anime-card">
+        <img src="imagens/deathnote.jpg" alt="Death Note">
+        <h3>Death Note</h3>
+        <div class="stars" data-id="deathnote">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <button onclick="comentar('deathnote', 'Death Note')">Comentar</button>
+      </div>
+    </section>
+
+    <section id="comentario-box" class="comentario-box" style="display: none;">
+      <h2>Comentário sobre <span id="anime-nome"></span></h2>
+      <textarea id="comentario" rows="4" placeholder="Escreva seu comentário..."></textarea>
+      <br>
+      <button onclick="salvarComentario()">Salvar</button>
+      <button onclick="fecharComentario()">Cancelar</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
